@@ -1,5 +1,6 @@
 body {
 	background-color: white;
+	font-family: sans-serif;
 }
 
 #nav {
@@ -50,4 +51,8 @@ body {
 
 h2 {
 	padding-top: 0.3em;
+}
+
+img {
+	border: none;
 }
