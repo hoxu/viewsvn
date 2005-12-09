@@ -32,7 +32,7 @@
 About</h2>
 
 <p>ViewSVN provides simple and easy to set up web interface for viewing SVN repositories. Some features are: directory/file browsing at different revisions, diffing and log viewing.</p>
-<p>It uses svn commandline tools so it works without direct repository access (but that can be used as well). The downside is that it is rather slow, but hopefully that will be fixed in the future.</p>
+<p>It uses svn commandline tools so it works without direct repository access (but that can be used as well). The downside is that it may be rather slow, but hopefully that will be fixed in the future.</p>
 <p>If you are looking for a feature-rich and robust subversion repository browser, this one is not for you. Try ViewCVS instead.</p>
 
 <h2><a name="license" />
@@ -45,10 +45,11 @@ Features</h2>
 
 <div>You can
 <ul>
-<li>Have ViewSVN serve multiple repositories (currently they need to share same root, though)</li>
+<li>Have ViewSVN serve multiple repositories (they don't need to share root/authentication/etc, eg. one can be run by svnserve and another in apache)</li>
 <li>Browse directories and files at different revisions</li>
 <li>Request diffs between different directory and file revisions</li>
 <li>View changelog for paths and easily view changes in a certain revision</li>
+<li>Monitor changes using <a href="#links">RSS feeds</a> (for any project, or only a subpath (like /branches/yourbranch))</li>
 <li>Check out the demo to see for yourself</li>
 </ul>
 </div>
@@ -56,34 +57,31 @@ Features</h2>
 <h2><a name="req" />
 Requirements</h2>
 
-<div><a href="http://httpd.apache.org/">Apache</a>, <a href="http://www.php.net/">PHP4</a>, <a href="http://subversion.tigris.org/">Subversion</a>. Five minutes of time to set up.</div>
+<div><a href="http://httpd.apache.org/">Apache</a>, <a href="http://www.php.net/">PHP4</a>, <a href="http://subversion.tigris.org/">Subversion</a>. Five to ten minutes of time to set up.</div>
 
 <h2><a name="demo" />
 Demo</h2>
 
-<p>Baruch Even is using ViewSVN for repositories of his <a href="http://freshmeat.net/projects/autofw/">autofw</a> and <a href="http://freshmeat.net/projects/chktex/">ChkTeX</a> projects; available for browsing <a href="http://svn.ev-en.org/">here</a>.</p>
+<p>Baruch Even is using ViewSVN for repositories of his <a href="http://freshmeat.net/projects/autofw/">autofw</a> and <a href="http://freshmeat.net/projects/chktex/">ChkTeX</a> projects; available for browsing at <a href="http://svn.ev-en.org/">http://svn.ev-en.org/</a>.</p>
 
-<p>Anselm Garbe of the <a href="http://freshmeat.net/projects/wmi">Window Manager Improved</a> project has also set up <a href="http://wmi.modprobe.de/viewsvn">ViewSVN for it</a>.</p>
+<p>Brian Aker also provides a repository for public scrutiny at <a href="http://cvs.tangent.org">http://cvs.tangent.org/</a></p>
 
 <p>If you are using ViewSVN for a public open source project feel free to send me link and I can put it here.</p>
 
 <h2><a name="debs" />
 Debs</h2>
 
-<div>Debian packages are available for sid. Add following line in your /etc/apt/sources.list:</div>
-
-<pre><code>deb http://viewsvn.berlios.de/debian ./</code></pre>
-
-<div>After that, running <code>apt-get update; apt-get install viewsvn</code> should install latest ViewSVN for you. Alternatively you can just download the package <a href="debian/">manually</a>, and use <code>dpkg -i</code> to install it.</div>
+<p>BerliOS no longer allows downloading of .debs from project homepages, so I had to move the debs to <a href="http://developer.berlios.de/project/showfiles.php?group_id=1833">the download section</a>. Unfortunately that means it's no longer possible to update by adding a line to /etc/apt/sources.list, so you need to download the debs manually and <code>dpkg -i</code>. Bummer.</p>
 
 
 <h2><a name="links" />
-Links</h2>
+See also</h2>
 
 <ul>
 <li><a href="http://subversion.tigris.org/">Subversion</a></li>
 <li><a href="http://freshmeat.net/projects/svnweb/">SVN::Web</a></li>
 <li><a href="http://viewcvs.sourceforge.net/">ViewCVS</a> (also capable of browsing subversion repositories)</li>
+<li>RSS readers: <a href="http://sage.mozdev.org/">Sage for Mozilla Firefox</a>, <a href="http://liferea.sourceforge.net/">Linux Feed Reader</a></li>
 </ul>
 
 <div>
